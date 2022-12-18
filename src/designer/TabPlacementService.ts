@@ -1,4 +1,4 @@
-import { DefaultPlacementService, IDesignItem } from "@node-projects/web-component-designer";
+import { DefaultPlacementService, IDesignItem, IPlacementView, IPoint } from "@node-projects/web-component-designer";
 import { TabWebcomponent } from "../tab/TabWebcomponent.js";
 
 export default class TabPlacementService extends DefaultPlacementService {
@@ -21,5 +21,11 @@ export default class TabPlacementService extends DefaultPlacementService {
             if (i.hasStyle('top'))
                 i.removeStyle('top');
         }
+    }
+
+    override place(event: MouseEvent, placementView: IPlacementView, container: IDesignItem, startPoint: IPoint, offsetInControl: IPoint, newPoint: IPoint, items: IDesignItem[]): void {
+    }
+
+    override finishPlace(event: MouseEvent, placementView: IPlacementView, container: IDesignItem, startPoint: IPoint, offsetInControl: IPoint, newPoint: IPoint, items: IDesignItem[]): void {
     }
 }
