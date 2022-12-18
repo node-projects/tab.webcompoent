@@ -1,5 +1,5 @@
 import { IDesignerCanvas, IElementInteractionService } from "@node-projects/web-component-designer";
-import { TabWebcomponent } from "../tab/TabWebcomponent";
+import { TabWebcomponent } from "../tab/TabWebcomponent.js";
 
 export default class ElementInteractionService implements IElementInteractionService {
     stopEventHandling(designerCanvas: IDesignerCanvas, event: PointerEvent, currentElement: Element) {
