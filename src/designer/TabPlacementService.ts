@@ -16,6 +16,10 @@ export default class TabPlacementService extends DefaultPlacementService {
                 i.removeStyle('width');
             if (i.hasStyle('heigth'))
                 i.removeStyle('heigth');
+            if (i.hasStyle('left'))
+                i.removeStyle('left');
+            if (i.hasStyle('top'))
+                i.removeStyle('top');
         }
     }
 }
