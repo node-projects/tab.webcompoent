@@ -14,13 +14,20 @@ export class TabWebcomponent extends BaseCustomWebComponentConstructorAppend {
                 position: static;
             }
 
+            .tab-header-container::-webkit-scrollbar { 
+                display: none;
+            }
+
             .tab-header-container {
+                scrollbar-width: none;
                 height: 30px;
                 display: flex;
                 user-select: none; 
                 flex-direction: row; 
                 cursor: pointer; 
                 background: inherit;
+                white-space: nowrap;
+                overflow: auto;
             }
 
             .tab-header-container > div {
