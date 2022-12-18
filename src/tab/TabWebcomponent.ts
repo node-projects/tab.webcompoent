@@ -67,7 +67,7 @@ export class TabWebcomponent extends BaseCustomWebComponentConstructorAppend {
 
         for (let item of this.children as unknown as HTMLElement[]) {
             const div = document.createElement('div');
-            div.innerText = item.getAttribute('header');
+            div.innerText = item.getAttribute('header') ?? "Tab";
             div.onclick = (e) => this._headerClick(e);
             this._tabs.appendChild(div);
         }
