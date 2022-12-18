@@ -10,12 +10,12 @@ export default class TabPlacementService extends DefaultPlacementService {
 
     override enterContainer(container: IDesignItem, items: IDesignItem[]) {
         for (let i of items) {
-            if (i.lastContainerSize) {
-                i.setStyle('width', '100%');
-                i.setStyle('height', '100%');
-                if (!i.hasStyle('position'))
-                    i.removeStyle('position');
-            }
+            if (i.hasStyle('position'))
+                i.removeStyle('position');
+            if (i.hasStyle('width'))
+                i.removeStyle('width');
+            if (i.hasStyle('heigth'))
+                i.removeStyle('heigth');
         }
     }
 }

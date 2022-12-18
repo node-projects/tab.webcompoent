@@ -8,6 +8,12 @@ export class TabWebcomponent extends BaseCustomWebComponentConstructorAppend {
                 background: lightgray
             }
 
+            ::slotted(*) {
+                width: 100%;
+                height: 100%;
+                position: static;
+            }
+
             .tab-header-container {
                 height: 30px;
                 display: flex;
