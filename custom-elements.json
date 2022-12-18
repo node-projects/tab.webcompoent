@@ -2,40 +2,53 @@
     "schemaVersion": "1.0.0",
     "readme": "README.md",
     "modules": [
-      {
-        "kind": "javascript-module",
-        "path": "dist/tab/TabWebcomponent.js",
-        "declarations": [
-          {
-            "kind": "class",
-            "description": "A Tab Control",
-            "name": "TabWebcomponent",
-            "events": [
-              {
-                "name": "selected-index-changed",
-                "description": "Is raised when the selected index changes",
-                "type": {
-                  "title": "String"
+        {
+            "kind": "javascript-module",
+            "path": "dist/tab/TabWebcomponent.js",
+            "declarations": [
+                {
+                    "kind": "class",
+                    "description": "A Tab Control",
+                    "name": "TabWebcomponent",
+                    "members": [
+                        {
+                            "kind": "field",
+                            "name": "selectedIndex",
+                            "type": "number"
+                        }
+                    ],
+                    "attributes": [
+                        {
+                            "name": "selected-index",
+                            "fieldName": "selectedIndex"
+                        }
+                    ],
+                    "events": [
+                        {
+                            "name": "selected-index-changed",
+                            "description": "Is raised when the selected index changes",
+                            "type": {
+                                "title": "String"
+                            }
+                        }
+                    ],
+                    "superclass": {
+                        "name": "BaseCustomWebComponentConstructorAppend"
+                    },
+                    "tagName": "node-projects-tab",
+                    "customElement": true
                 }
-              }
             ],
-            "superclass": {
-              "name": "BaseCustomWebComponentConstructorAppend"
-            },
-            "tagName": "node-projects-tab",
-            "customElement": true
-          }
-        ],
-        "exports": [
-          {
-            "kind": "custom-element-definition",
-            "name": "node-projects-tab",
-            "declaration": {
-              "name": "TabWebcomponent",
-              "module": "dist/tab/TabWebcomponent.js"
-            }
-          }
-        ]
-      }
+            "exports": [
+                {
+                    "kind": "custom-element-definition",
+                    "name": "node-projects-tab",
+                    "declaration": {
+                        "name": "TabWebcomponent",
+                        "module": "dist/tab/TabWebcomponent.js"
+                    }
+                }
+            ]
+        }
     ]
-  }
+}
