@@ -52,6 +52,7 @@ export class TabWebcomponent extends BaseCustomWebComponentConstructorAppend {
     private _selectedIndex = 0;
     private _oldIndex: number;
     private _isInitialized = false;
+    private _observer: MutationObserver;
 
     public get selectedIndex() {
         return this._selectedIndex;
@@ -65,12 +66,38 @@ export class TabWebcomponent extends BaseCustomWebComponentConstructorAppend {
         super();
         this._restoreCachedInititalValues();
 
+        this._observer = new MutationObserver(x => {
+            this._refreshContent();
+        })
+
         this._tabs = this._getDomElement<HTMLDivElement>('tabs');
+    }
+
+    connectedCallback() {
+        this._observer.observe(this, { childList: true });
+    }
+
+    disconnectedCallback() {
+        this._observer.disconnect();
     }
 
     ready() {
         this._parseAttributesToProperties();
 
+        for (let item of this.children as unknown as HTMLElement[]) {
+            const div = document.createElement('div');
+            div.innerText = item.getAttribute('header') ?? "Tab";
+            div.onclick = (e) => this._headerClick(e);
+            this._tabs.appendChild(div);
+        }
+
+        this._oldIndex = -1;
+        this._selectedIndexChanged();
+        this._isInitialized = true;
+    }
+
+    _refreshContent() {
+        this._tabs.innerHTML = "";
         for (let item of this.children as unknown as HTMLElement[]) {
             const div = document.createElement('div');
             div.innerText = item.getAttribute('header') ?? "Tab";
