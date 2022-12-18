@@ -3,6 +3,9 @@
         "services": {
             "elementInteractionService": [
                 "./dist/designer/ElementInteractionService.js"
+            ],
+            "containerService": [
+                "./dist/designer/TabPlacementService.js"
             ]
         }
     }
