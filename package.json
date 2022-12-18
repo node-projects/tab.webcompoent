@@ -1,0 +1,30 @@
+{
+  "name": "@node-projects/tab.webcomponent",
+  "version": "0.0.0",
+  "description": "",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/@node-projects/tab.webcomponent.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/@node-projects/tab.webcomponent/issues"
+  },
+  "homepage": "https://github.com/@node-projects/tab.webcomponent#readme",
+  "scripts": {
+    "tsc": "tsc",
+    "start": "web-dev-server --node-resolve --open sample/index.html",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.4",
+    "es-module-shims": "^1.6.2",
+    "@web/dev-server": "^0.1.35"
+  },
+  "dependencies": {
+    "@node-projects/base-custom-webcomponent": "^0.10.7",
+    "construct-style-sheets-polyfill": "^3.1.0"
+  }
+}
