@@ -1,8 +1,9 @@
 {
   "name": "@node-projects/tab.webcomponent",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "",
   "type": "module",
+  "private": false,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/@node-projects/tab.webcomponent.git"
