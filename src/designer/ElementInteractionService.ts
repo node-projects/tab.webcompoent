@@ -1,7 +1,7 @@
 import { IDesignerCanvas, IElementInteractionService } from "@node-projects/web-component-designer";
 import { TabWebcomponent } from "../tab/TabWebcomponent";
 
-export class ElementInteractionService implements IElementInteractionService {
+export default class ElementInteractionService implements IElementInteractionService {
     stopEventHandling(designerCanvas: IDesignerCanvas, event: PointerEvent, currentElement: Element) {
         if (event.type !== 'pointerdown')
             return false;
@@ -14,5 +14,4 @@ export class ElementInteractionService implements IElementInteractionService {
 
         return false;
     }
-
 }
