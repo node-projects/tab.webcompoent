@@ -20,6 +20,7 @@ export default class TabPlacementService extends DefaultPlacementService {
                 i.removeStyle('left');
             if (i.hasStyle('top'))
                 i.removeStyle('top');
+            i.setStyle('display', 'none');
         }
     }
 
