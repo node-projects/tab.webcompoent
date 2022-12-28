@@ -14,7 +14,9 @@
                         {
                             "kind": "field",
                             "name": "selectedIndex",
-                            "type": "number"
+                            "type":  {
+                                "text": "number"
+                            }
                         }
                     ],
                     "attributes": [

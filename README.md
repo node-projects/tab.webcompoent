@@ -1,5 +1,6 @@
 # tab.webcomponent
-a tab control webcomponent
+
+[![Published on npm](https://img.shields.io/npm/v/@node-projects/tab.webcomponent.svg?logo=npm)](https://www.npmjs.com/package/@node-projects/tab.webcomponent)
 
 # description
 a simple tab control as webcomponent..
