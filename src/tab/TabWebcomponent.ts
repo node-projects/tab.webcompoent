@@ -131,7 +131,6 @@ export class TabWebcomponent extends BaseCustomWebComponentConstructorAppend {
             for (const item of this.children as any as HTMLElement[]) {
                 if (i == this.selectedIndex) {
                     item.setAttribute('slot', 'main');
-                    item.style.display = '';
                 } else {
                     item.removeAttribute('slot');
                 }
