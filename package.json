@@ -26,7 +26,7 @@
     "@node-projects/web-component-designer": "^0.0.258",
     "@web/dev-server": "^0.3.0",
     "es-module-shims": "^1.8.0",
-    "release-it": "^16.1.4",
+    "release-it": "^16.1.5",
     "typescript": "^5.1.6"
   },
   "dependencies": {
