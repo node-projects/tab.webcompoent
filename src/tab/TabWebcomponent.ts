@@ -44,7 +44,7 @@ export class TabWebcomponent extends BaseCustomWebComponentConstructorAppend {
             <div style="display: flex; flex-direction: column; height: 100%; width: 100%;">
                 <div id="tabs" class="tab-header-container" style="height: 30px;"></div>
                 <div id="panels" class="tab-container">
-                    <slot></slot>
+                    <slot name="main"></slot>
                 </div>
             </div>
         `;
@@ -130,9 +130,10 @@ export class TabWebcomponent extends BaseCustomWebComponentConstructorAppend {
             let i = 0;
             for (const item of this.children as any as HTMLElement[]) {
                 if (i == this.selectedIndex) {
-                    item.style.display = 'block';
+                    item.setAttribute('slot', 'main');
+                    item.style.display = '';
                 } else {
-                    item.style.display = 'none';
+                    item.removeAttribute('slot');
                 }
                 i++;
             }
