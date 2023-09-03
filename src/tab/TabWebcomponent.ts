@@ -11,7 +11,7 @@ export class TabWebcomponent extends BaseCustomWebComponentConstructorAppend {
             ::slotted(*) {
                 width: 100%;
                 height: 100%;
-                position: static;
+                position: relative;
             }
 
             .tab-header-container::-webkit-scrollbar { 
