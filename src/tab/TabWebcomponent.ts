@@ -37,8 +37,7 @@ export class TabWebcomponent extends BaseCustomWebComponentConstructorAppend {
             .tab-container {
                 height: calc(100% - 30px);
                 overflow: none;
-            }
-            `;
+            }`;
 
     public static override readonly template = html`
             <div style="display: flex; flex-direction: column; height: 100%; width: 100%;">

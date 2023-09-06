@@ -6,6 +6,9 @@
             ],
             "containerService": [
                 "./dist/designer/TabPlacementService.js"
+            ],
+            "attachedPropertyService": [
+                "./dist/designer/AttachedPropertiesService.js"
             ]
         }
     }
