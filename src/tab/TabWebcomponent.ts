@@ -5,7 +5,8 @@ export class TabWebcomponent extends BaseCustomWebComponentConstructorAppend {
     public static override readonly style = css`
             :host {
                 display: block;
-                background: lightgray
+                background: lightgray;
+                --active-tab-header-background: white;
             }
 
             ::slotted(*) {
@@ -138,7 +139,7 @@ export class TabWebcomponent extends BaseCustomWebComponentConstructorAppend {
             i = 0;
             for (const item of this._tabs.children as any as HTMLElement[]) {
                 if (i == this.selectedIndex) {
-                    item.style.background = 'white';
+                    item.style.background = 'var(--active-tab-header-background)';
                 } else {
                     item.style.background = '';
                 }
