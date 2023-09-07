@@ -1,4 +1,4 @@
-import { IDesignItem, IProperty, PropertyType } from "@node-projects/web-component-designer";
+import { IDesignItem, IProperty, IPropertyGroup, PropertyType } from "@node-projects/web-component-designer";
 import { TabWebcomponent } from "../tab/TabWebcomponent.js";
 import { AbstractPolymerLikePropertiesService } from "@node-projects/web-component-designer/dist/elements/services/propertiesService/services/AbstractPolymerLikePropertiesService.js";
 
@@ -7,13 +7,15 @@ export default class AttachedPropertiesService extends AbstractPolymerLikeProper
     return designItem.parent?.element instanceof TabWebcomponent;
   }
 
-  public override getProperties(designItem: IDesignItem): IProperty[] {
+  public override getProperties(designItem: IDesignItem): IProperty[] | IPropertyGroup[] {
     return [{
-      name: 'header',
-      description: 'header shown in tab control',
-      type: "string",
-      service: this,
-      propertyType: PropertyType.propertyAndAttribute
+      name: 'tab-control', properties: [{
+        name: 'header',
+        description: 'header shown in tab control',
+        type: "string",
+        service: this,
+        propertyType: PropertyType.propertyAndAttribute
+      }]
     }];
   }
 
